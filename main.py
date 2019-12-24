@@ -118,8 +118,5 @@ if __name__ == '__main__':
             fillRed(ws, top_length, x)
         else:
             if should_kick(ws, top_length, x):
-                print(ws.cell(row=x, column=2).value)
+                print((ws.cell(row=x, column=1).value, ws.cell(row=x, column=2).value))
     wb.save('Sample.xlsx')
-#     TODO: Return all QQ/username of people who will be kicked out.
-#     1. All empty, Now - Current > 30 days
-#     2. Start from last, 8 consecutive empty.
